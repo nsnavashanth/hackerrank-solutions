@@ -6,7 +6,7 @@
 # Platform    HackerRank
 # Language    python3
 # Status      Accepted
-# Submitted   2026-07-28, 10:10 a.m.
+# Submitted   2026-07-28, 10:12 a.m.
 # ──────────────────────────────────────────────────
 
 class Node:
