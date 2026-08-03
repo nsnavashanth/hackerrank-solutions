@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-03, 10:11 a.m.
+# Technique   recursive-lca-traversal
+# Time        O(N)
+# Space       O(H)
+# Insight     The algorithm recursively identifies the lowest common ancestor by returning the node itself if it matches either target or if both subtrees contain one of the targets.
+# Interview   Before: "How would you find the common manager in a binary hierarchy?" After: "I use a recursive post-order traversal to find the LCA in O(N) time and O(H) space, where H is the tree height, ensuring we correctly handle cases where one node is an ancestor of the other."
+# Pitfalls    (1) The level-order input parsing assumes 'null' strings are present for missing nodes, which is critical for maintaining the correct tree structure.  (2) The LCA logic assumes both p and q exist within the tree; if a target is missing, the function may return the other node as the LCA.
 # ──────────────────────────────────────────────────
 
 import sys
