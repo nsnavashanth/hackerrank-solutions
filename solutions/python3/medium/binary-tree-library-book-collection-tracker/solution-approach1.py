@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-03, 09:11 a.m.
+# Technique   level-order-queue-insertion
+# Time        O(n)
+# Space       O(n)
+# Insight     The implementation uses a queue to maintain level-order insertion, ensuring each node is processed exactly once to build the tree and subsequently counted via a recursive traversal.
+# Interview   Before: "How would you build a binary tree from a list and count its nodes?" After: "I used a queue to perform level-order insertion, which runs in O(n) time and space, followed by a recursive O(n) traversal to count the nodes, correctly handling the n input size."
+# Pitfalls    (1) Failing to handle the empty input case where n is zero, which would cause an index error if not checked.  (2) Incorrectly assuming the tree is a binary search tree, whereas the problem specifies a standard binary tree structure built level-by-level.  (3) Mismanaging the queue pointer index i, which must be incremented after each child insertion to avoid skipping elements.
 # ──────────────────────────────────────────────────
 
 import sys
