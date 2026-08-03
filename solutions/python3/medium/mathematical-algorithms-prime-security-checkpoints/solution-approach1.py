@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-03, 09:25 a.m.
+# Technique   trial-division-primality-test
+# Time        O((end-start) * sqrt(end))
+# Space       O(end-start)
+# Insight     The algorithm iterates through the inclusive range and validates each integer using trial division up to its square root, skipping multiples of two and three to optimize the check.
+# Interview   Before: "I would iterate through the range and check each number for primality." After: "I implemented a trial division approach with O((end-start) * sqrt(end)) time complexity, ensuring that numbers less than two are correctly excluded as per the problem constraints."
+# Pitfalls    (1) Failing to handle the inclusive range correctly by using range(start, end) instead of range(start, end + 1).  (2) Incorrectly identifying 1 as a prime number, which violates the mathematical definition of primality.  (3) Neglecting to handle the case where no primes exist in the range, which requires printing nothing.
 # ──────────────────────────────────────────────────
 
 import sys
