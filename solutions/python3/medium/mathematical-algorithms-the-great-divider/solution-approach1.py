@@ -7,6 +7,12 @@
 # Language    python3
 # Status      Accepted
 # Submitted   2026-08-04, 09:01 a.m.
+# Technique   iterative-gcd-reduction
+# Time        O(n * log(min(a_i)))
+# Space       O(n)
+# Insight     The algorithm maintains the greatest common divisor of the processed prefix by iteratively applying the Euclidean algorithm to the current result and the next element in the sequence.
+# Interview   Before: "I would compute the GCD of all numbers by checking every possible divisor." After: "I used an iterative approach with math.gcd, which runs in O(n * log(min(a_i))) time, efficiently handling up to 10^5 inputs by breaking early if the GCD reaches 1."
+# Pitfalls    (1) Failing to handle the early exit condition when the GCD becomes 1, which is valid but potentially inefficient for large datasets.  (2) Assuming the input list is empty, though the problem constraints specify n is at least 1.  (3) Incorrectly slicing the input list if the input format contains extra data beyond the n guardian numbers.
 # ──────────────────────────────────────────────────
 
 import math
